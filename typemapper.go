@@ -24,6 +24,11 @@ func IgnoreFields(dstFields ...interface{}) {
 	panic(panicNotRuntime)
 }
 
+// IgnoreUnexported tells the map to ignore unexported destination fields.
+func IgnoreUnexported() {
+	panic(panicNotRuntime)
+}
+
 // MapWith provides additional mapping functions to use for
 // type conversions.
 func MapWith(mappingFuncs ...interface{}) {

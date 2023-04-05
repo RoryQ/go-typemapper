@@ -64,6 +64,11 @@ func (g *Generator) parseFunction(f *ssa.Function) (*mappingFunc, error) {
 					if err != nil {
 						return nil, errors.WithStack(err)
 					}
+				case "IgnoreUnexported":
+					err = handleIgnoreUnexported(m, inst)
+					if err != nil {
+						return nil, errors.WithStack(err)
+					}
 				case "MapWith":
 					err = handleMapWith(m, inst)
 					if err != nil {
@@ -333,6 +338,21 @@ func handleIgnoreFields(m *mappingFunc, call ssa.CallInstruction) error {
 		ignoreNames = append(ignoreNames, ig.Name())
 	}
 	m.ignores = append(m.ignores, ignoreNames...)
+	return nil
+}
+
+func handleIgnoreUnexported(m *mappingFunc, call ssa.CallInstruction) error {
+	if argLen := len(call.Common().Args); argLen > 0 {
+		return errors.Errorf("expected 0 arg for IgnoreFields, found %d", argLen)
+	}
+
+	dst := unwrapStruct(m.dstType)
+	for i := 0; i < dst.NumFields(); i++ {
+		v := dst.Field(i)
+		if !v.Exported() {
+			m.ignores = append(m.ignores, v.Name())
+		}
+	}
 	return nil
 }
 
