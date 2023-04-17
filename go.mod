@@ -1,4 +1,4 @@
-module github.com/paultyng/go-typemapper
+module github.com/roryq/go-typemapper
 
 go 1.20
 

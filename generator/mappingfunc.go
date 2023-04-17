@@ -5,7 +5,7 @@ import (
 
 	"golang.org/x/tools/go/ssa"
 
-	"github.com/paultyng/go-typemapper/mapper"
+	"github.com/roryq/go-typemapper/mapper"
 )
 
 type mappingFunc struct {

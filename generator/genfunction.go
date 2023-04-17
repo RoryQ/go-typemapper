@@ -7,7 +7,7 @@ import (
 	. "github.com/dave/jennifer/jen"
 	"github.com/pkg/errors"
 
-	"github.com/paultyng/go-typemapper/mapper"
+	"github.com/roryq/go-typemapper/mapper"
 )
 
 const (

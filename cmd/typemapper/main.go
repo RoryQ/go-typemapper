@@ -11,7 +11,7 @@ import (
 	"golang.org/x/tools/go/packages"
 	"golang.org/x/tools/go/ssa"
 
-	"github.com/paultyng/go-typemapper/generator"
+	"github.com/roryq/go-typemapper/generator"
 )
 
 func main() {
