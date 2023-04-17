@@ -8,8 +8,6 @@ import (
 	"github.com/aws/aws-sdk-go/service/directoryservice"
 	"github.com/aws/aws-sdk-go/service/ec2"
 	"github.com/aws/aws-sdk-go/service/elbv2"
-
-	"github.com/paultyng/go-typemapper"
 )
 
 func (src *tag) ACMTag() *acm.Tag {

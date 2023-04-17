@@ -1,9 +1,10 @@
+//go:build typemapper
 // +build typemapper
 
 package testdata
 
 import (
-	typemapper "github.com/paultyng/go-typemapper"
+	typemapper "github.com/roryq/go-typemapper"
 )
 
 func MapStructSrcDestParams(src SourceStruct, dst *DestStruct) {

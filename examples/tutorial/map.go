@@ -1,10 +1,7 @@
+//go:build typemapper
 // +build typemapper
 
 package main
-
-import (
-	"github.com/paultyng/go-typemapper"
-)
 
 func MapFooToBar(src Foo) Bar {
 	dst := Bar{}

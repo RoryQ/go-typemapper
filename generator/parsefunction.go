@@ -451,7 +451,7 @@ func isTypeMapperCall(inst ssa.CallInstruction) bool {
 	if !ok {
 		return false
 	}
-	if !strings.HasSuffix(callF.Pkg.Pkg.Path(), "github.com/paultyng/go-typemapper") {
+	if !strings.HasSuffix(callF.Pkg.Pkg.Path(), "github.com/roryq/go-typemapper") {
 		return false
 	}
 	return true

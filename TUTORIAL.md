@@ -41,7 +41,7 @@ To start using `typemapper`, start by creating a file to hold your declarations 
 package main
 
 import (
-    "github.com/paultyng/go-typemapper"
+    "github.com/roryq/go-typemapper"
 )
 
 func MapFooToBar(src Foo) Bar {

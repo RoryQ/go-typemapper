@@ -1,11 +1,10 @@
+//go:build typemapper
 // +build typemapper
 
 package consul
 
 import (
 	"github.com/hashicorp/consul/agent/structs"
-
-	"github.com/paultyng/go-typemapper"
 )
 
 // https://github.com/hashicorp/consul/blob/5457bca10c1f8a2ac0e338fdc06c95fd5cff49c3/agent/structs/structs.go#L642-L660

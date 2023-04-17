@@ -1,4 +1,4 @@
-package typemapper // import "github.com/paultyng/go-typemapper"
+package typemapper // import "github.com/roryq/go-typemapper"
 
 const panicNotRuntime = "this should not be invoked at runtime"
 
